@@ -45,15 +45,11 @@ export default function Home() {
 
         <section id="skills" className="space-y-6 scroll-mt-20">
           <h2 className="text-2xl font-semibold">Skills</h2>
-          <div className="grid gap-5 sm:grid-cols-2">
+          <div className="divide-y divide-border/60 rounded-xl border border-border/70">
             {portfolioContent.skills.map((group) => (
-              <article key={group.title} className="rounded-xl border border-border/70 bg-card/30 p-4">
-                <h3 className="mb-3 text-lg font-medium">{group.title}</h3>
-                <ul className="space-y-1 text-sm text-muted-foreground sm:text-base">
-                  {group.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
+              <article key={group.title} className="grid gap-2 p-4 sm:grid-cols-[170px_1fr] sm:items-start">
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{group.items.join(", ")}</p>
               </article>
             ))}
           </div>
