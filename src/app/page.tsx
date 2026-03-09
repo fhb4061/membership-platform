@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { LucideIcon } from "lucide-react";
-import { Award, BriefcaseBusiness, Contact, UserRound, Wrench } from "lucide-react";
+import { Award, BriefcaseBusiness, Mail, UserRound, Wrench } from "lucide-react";
 
 import type { PortfolioSectionId } from "@/app/portfolio-data";
 import { portfolioContent } from "@/app/portfolio-data";
@@ -25,62 +25,44 @@ const navIconMap: Record<PortfolioSectionId, LucideIcon> = {
   skills: Wrench,
   experience: BriefcaseBusiness,
   "certs-awards": Award,
-  contact: Contact,
+  contact: Mail,
 };
 
 export default function Home() {
+  const renderNavItems = (showLabel: boolean) =>
+    portfolioContent.navItems.map((item) => {
+      const Icon = navIconMap[item.id];
+
+      return (
+        <NavigationMenuItem key={`${showLabel ? "desktop" : "mobile"}-${item.id}`}>
+          <Button
+            asChild
+            variant="outline"
+            size={showLabel ? "sm" : "icon-sm"}
+            className="rounded-full border-border/70 bg-transparent text-muted-foreground shadow-none hover:bg-accent/30 hover:text-foreground"
+          >
+            <a href={`#${item.id}`} aria-label={item.label} title={item.label}>
+              <Icon className="size-4" />
+              {showLabel ? item.label : null}
+            </a>
+          </Button>
+        </NavigationMenuItem>
+      );
+    });
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="sticky top-0 z-10 border-b border-border/60 bg-background/90 backdrop-blur">
         <div className="mx-auto w-full max-w-5xl px-5 sm:px-8">
           <div className="flex justify-center py-2 sm:hidden">
             <NavigationMenu aria-label="Section navigation" viewport={false}>
-              <NavigationMenuList className="gap-2">
-                {portfolioContent.navItems.map((item) => {
-                  const Icon = navIconMap[item.id];
-
-                  return (
-                    <NavigationMenuItem key={item.id}>
-                      <Button
-                        asChild
-                        variant="outline"
-                        size="icon-sm"
-                        className="rounded-full border-border/70 bg-transparent text-muted-foreground shadow-none hover:bg-accent/30 hover:text-foreground"
-                      >
-                        <a href={`#${item.id}`} aria-label={item.label}>
-                          <Icon className="size-4" />
-                        </a>
-                      </Button>
-                    </NavigationMenuItem>
-                  );
-                })}
-              </NavigationMenuList>
+              <NavigationMenuList className="gap-2">{renderNavItems(false)}</NavigationMenuList>
             </NavigationMenu>
           </div>
 
           <div className="hidden justify-center py-3 sm:flex">
             <NavigationMenu aria-label="Section navigation" viewport={false}>
-              <NavigationMenuList className="gap-2 text-sm">
-                {portfolioContent.navItems.map((item) => {
-                  const Icon = navIconMap[item.id];
-
-                  return (
-                    <NavigationMenuItem key={item.id}>
-                      <Button
-                        asChild
-                        variant="outline"
-                        size="sm"
-                        className="rounded-full border-border/70 bg-transparent text-muted-foreground shadow-none hover:bg-accent/30 hover:text-foreground"
-                      >
-                        <a href={`#${item.id}`}>
-                          <Icon className="size-4" />
-                          {item.label}
-                        </a>
-                      </Button>
-                    </NavigationMenuItem>
-                  );
-                })}
-              </NavigationMenuList>
+              <NavigationMenuList className="gap-2 text-sm">{renderNavItems(true)}</NavigationMenuList>
             </NavigationMenu>
           </div>
         </div>
