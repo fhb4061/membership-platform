@@ -77,9 +77,12 @@ export default function Home() {
                   <p className="text-base font-normal text-muted-foreground">{experience.company}</p>
                 </CardHeader>
                 <CardContent className="px-5 pb-5">
-                  <ul className="space-y-2 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  <ul className="space-y-3">
                     {experience.bullets.map((bullet) => (
-                      <li key={bullet}>• {bullet}</li>
+                      <li key={bullet} className="relative pl-4">
+                        <span className="absolute inset-y-0 left-0 w-1 rounded-full bg-primary/65" />
+                        <span className="relative text-sm leading-relaxed text-muted-foreground sm:text-base">{bullet}</span>
+                      </li>
                     ))}
                   </ul>
                 </CardContent>
