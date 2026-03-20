@@ -10,11 +10,6 @@ export type SkillGroup = {
   items: string[];
 };
 
-export type ProfileFact = {
-  label: string;
-  value: string;
-};
-
 export type ExperienceItem = {
   role: string;
   company: string;
@@ -46,7 +41,6 @@ export type PortfolioContent = {
   headline: string;
   heroSummary: string;
   about: string;
-  profileFacts: ProfileFact[];
   skills: SkillGroup[];
   experiences: ExperienceItem[];
   certifications: Certification[];
@@ -62,12 +56,6 @@ export const portfolioContent: PortfolioContent = {
     "Full-stack developer with 7+ years delivering scalable, user-centric web applications across banking and public-sector domains.",
   about:
     "Over the past 7+ years, I have delivered scalable, user-centric software across banking and public-sector domains. I specialize in React and Spring Boot with a strong focus on clean architecture, simplicity, performance, and both user and developer experience. I value creating safe, empowered teams where people can voice ideas and concerns.",
-  profileFacts: [
-    { label: "Based", value: "Melbourne, Australia" },
-    { label: "Focus", value: "Full Stack Engineering" },
-    { label: "Domains", value: "Banking + Public Sector" },
-    { label: "Core Stack", value: "React + Spring Boot" },
-  ],
   skills: [
     {
       title: "Frontend",

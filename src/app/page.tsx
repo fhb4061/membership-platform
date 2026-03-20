@@ -84,7 +84,7 @@ export default function Home() {
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
           <section id="hero" className="space-y-4 scroll-mt-20">
             <Badge variant="outline" className="rounded-full border-primary/25 bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary">
-              Jonathan Lopeti
+              {portfolioContent.name}
             </Badge>
             <h1 className="text-balance text-3xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-[2.85rem] lg:leading-[1.05]">
               {portfolioContent.headline}
@@ -123,7 +123,7 @@ export default function Home() {
           </section>
         </aside>
 
-        <div className="space-y-14 lg:space-y-[4.5rem] lg:pt-2">
+        <div className="space-y-14 lg:space-y-18 lg:pt-2">
           <section id="about" className="space-y-3 scroll-mt-20">
             <div className="space-y-4">
               <span className={cn(badgeVariants({ variant: "outline" }), "rounded-full border-primary/20 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-primary")}>
