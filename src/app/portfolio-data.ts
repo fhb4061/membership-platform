@@ -109,7 +109,7 @@ export const portfolioContent: PortfolioContent = {
     },
     {
       role: "Developer",
-      company: "BNZ",
+      company: "Bank of New Zealand",
       period: "Feb 2019 - Nov 2023",
       bullets: [
         "Delivered daily-used staff workflows including Visa card ordering, blocking, and unblocking across branch operations.",
