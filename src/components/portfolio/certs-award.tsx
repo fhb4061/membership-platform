@@ -29,7 +29,7 @@ export function CertsAward() {
                 <h2 className="text-2xl font-semibold">Certs & Awards</h2>
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
-                <Card className="portfolio-panel gap-3 rounded-[1.5rem] py-5">
+                <Card className="gap-3 rounded-[1.5rem] py-5">
                     <CardHeader className="px-5 pb-0">
                         <CardTitle className="text-lg">Education</CardTitle>
                     </CardHeader>
@@ -40,7 +40,7 @@ export function CertsAward() {
                         <p className="text-sm text-muted-foreground">Major: {education.major}</p>
                     </CardContent>
                 </Card>
-                <Card className="portfolio-panel gap-3 rounded-[1.5rem] py-5">
+                <Card className="gap-3 rounded-[1.5rem] py-5">
                     <CardHeader className="px-5 pb-0">
                         <CardTitle className="text-lg">Certifications</CardTitle>
                     </CardHeader>

@@ -28,7 +28,7 @@ const navIconMap: Record<NavSectionId, LucideIcon> = {
     contact: Mail,
 };
 
-export function MainNaivgation() {
+export function MainNavigation() {
     const mobileNavItems: { id: NavSectionId; label: string }[] = [
         { id: "hero", label: "Hero" },
         ...desktopNavItems,
@@ -56,7 +56,7 @@ export function MainNaivgation() {
         });
 
     return (
-        <div className="portfolio-nav-shell sticky top-0 z-10 border-b">
+        <div className="border-border/80 bg-background/80 backdrop-blur sticky top-0 z-10 border-b">
             <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:w-[90vw] lg:max-w-none lg:px-10">
                 <div className="flex justify-center py-2 sm:hidden">
                     <NavigationMenu aria-label="Section navigation" viewport={false}>
