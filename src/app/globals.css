@@ -112,29 +112,6 @@
 }
 
 @layer components {
-  .portfolio-shell {
-    @apply min-h-screen bg-transparent text-foreground;
-  }
-
-  .portfolio-nav-shell {
-    @apply border-border/80 bg-background/80 backdrop-blur;
-  }
-
-  .portfolio-nav-button {
-    @apply rounded-full border-border/80 bg-background/50 text-foreground shadow-none hover:border-primary/60 hover:bg-primary/12 hover:text-primary;
-  }
-
-  .portfolio-hero-badge {
-    @apply rounded-full border-primary/35 bg-primary/10 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-primary;
-  }
-
-  .portfolio-section-badge {
-    @apply rounded-full border-primary/25 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-primary;
-  }
-
-  .portfolio-panel {
-    @apply border-border/80 bg-card/80 shadow-[0_14px_30px_rgba(0,0,0,0.22)];
-  }
 
   .portfolio-soft-panel {
     @apply overflow-hidden rounded-[1.5rem] border border-border/70 bg-card/45;
