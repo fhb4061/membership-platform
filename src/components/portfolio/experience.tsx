@@ -53,7 +53,7 @@ export function Experience() {
                             <CardTitle className="text-xl">{experience.role}</CardTitle>
                             <p className="text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
                         </CardHeader>
-                        <CardContent className="">
+                        <CardContent>
                             <ul className="space-y-3">
                                 {experience.bullets.map((bullet) => (
                                     <li key={bullet} className="relative pl-4">
