@@ -2,7 +2,6 @@
 import { Award, BriefcaseBusiness, House, LucideIcon, Mail, UserRound, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { Separator } from "../ui/separator";
 
 type PortfolioSectionId = "about" | "skills" | "experience" | "certs-awards" | "contact";
 

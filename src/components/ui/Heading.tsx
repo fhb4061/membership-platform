@@ -13,12 +13,12 @@ const headerVariants = cva(
     }
 );
 
-type HeaderProps = {
+type HeadingProps = {
     label: string;
     className?: string;
 } & VariantProps<typeof headerVariants>
 
-export function Header({ size = 1, label, className }: HeaderProps) {
+export function Heading({ size = 1, label, className }: HeadingProps) {
     const Comp = size == 1 ? "h1" : "h2";
 
     return (

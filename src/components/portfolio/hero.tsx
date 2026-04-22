@@ -1,4 +1,4 @@
-import { Header } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/Heading";
 
 type PortfolioHero = {
     name: string;
@@ -17,10 +17,10 @@ const portfolioHero: PortfolioHero = {
 export function Hero() {
     return (
         <section id="hero" className="space-y-2 scroll-mt-20">
-            <Header
+            <Heading
                 label={portfolioHero.name}
             />
-            <Header
+            <Heading
                 size={2}
                 label={portfolioHero.headline}
             />

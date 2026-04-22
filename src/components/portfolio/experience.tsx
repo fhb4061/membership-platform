@@ -1,6 +1,5 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "../ui/separator";
 
 type ExperienceItem = {
     role: string;

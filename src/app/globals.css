@@ -45,6 +45,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
+  --animate-laser: laser 2s linear infinite;
 }
 
 :root {
@@ -123,5 +125,15 @@
 
   .portfolio-accent-bar {
     @apply bg-primary/50;
+  }
+}
+
+@keyframes laser {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 }
