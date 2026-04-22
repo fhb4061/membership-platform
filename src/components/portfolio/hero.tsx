@@ -19,7 +19,7 @@ const portfolioHero: PortfolioHero = {
 export function Hero() {
     return (
         <section id="hero" className="space-y-4 scroll-mt-20">
-            <Badge variant="outline" className={cn("rounded-full border-primary/35 bg-primary/10 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-foreground")}>
+            <Badge variant="outline" className={cn("rounded-full border-primary/35 bg-primary/10 px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-foreground")}>
                 {portfolioHero.name}
             </Badge>
             <h1 className="text-balance text-3xl font-semibold leading-tight sm:text-5xl lg:text-[2.85rem] lg:leading-[1.05]">

@@ -58,7 +58,7 @@ export function Skills() {
                     <div key={group.title}>
                         {index > 0 && <Separator className="portfolio-divider" />}
                         <article className="grid gap-2 p-4 sm:grid-cols-[170px_1fr] sm:items-start">
-                            <h3 className="font-mono text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.title}</h3>
+                            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.title}</h3>
                             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{group.items.join(", ")}</p>
                         </article>
                     </div>

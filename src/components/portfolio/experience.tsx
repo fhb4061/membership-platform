@@ -49,7 +49,7 @@ export function Experience() {
                 {experiences.map((experience) => (
                     <Card key={`${experience.company}-${experience.period}`} className="gap-0 rounded-[1.5rem] py-0">
                         <CardHeader className="gap-1 px-5 py-5">
-                            <p className="font-mono text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
+                            <p className="text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
                             <CardTitle className="text-xl">{experience.role}</CardTitle>
                             <p className="text-base font-normal text-muted-foreground">{experience.company}</p>
                         </CardHeader>
