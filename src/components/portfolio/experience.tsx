@@ -1,5 +1,6 @@
 import { BriefcaseBusiness } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "../ui/separator";
 
 type ExperienceItem = {
     role: string;
@@ -48,17 +49,19 @@ export function Experience() {
             <div className="space-y-6">
                 {experiences.map((experience) => (
                     <Card key={`${experience.company}-${experience.period}`}>
-                        <CardHeader className="gap-1 pb-5">
-                            <p className="text-base font-normal text-muted-foreground">{experience.company}</p>
+                        <CardHeader className="gap-1 pb-2">
                             <CardTitle className="text-xl">{experience.role}</CardTitle>
-                            <p className="text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
+                            <CardDescription>
+                                <p className="text-base font-normal">{experience.company}</p>
+                                <p className="text-sm uppercase tracking-wide">{experience.period}</p>
+                            </CardDescription>
                         </CardHeader>
                         <CardContent>
                             <ul className="space-y-3">
                                 {experience.bullets.map((bullet) => (
                                     <li key={bullet} className="relative pl-4">
                                         <span className="portfolio-accent-bar absolute inset-y-0 left-0 w-1 rounded-full" />
-                                        <span className="relative text-sm leading-relaxed text-muted-foreground sm:text-base">{bullet}</span>
+                                        <span className="relative text-sm leading-relaxed sm:text-base">{bullet}</span>
                                     </li>
                                 ))}
                             </ul>

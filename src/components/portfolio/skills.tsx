@@ -12,20 +12,16 @@ const skills: SkillGroup[] = [
     {
         title: "Frontend",
         items: [
-            "React (JS/TS)",
-            "Redux / Redux Toolkit",
-            "RxJS",
+            "React",
+            "Redux Toolkit",
             "Tailwind CSS",
-            "Jest",
-            "Cypress",
-            "Playwright",
-            "React Testing Library",
             "UI/UX Design",
+            "Micro-frontend"
         ],
     },
     {
         title: "Backend",
-        items: ["Spring Boot (Java/Kotlin)", "GraphQL", "Kafka", "Swagger", "Apigee", "Oracle DB", "DB2"],
+        items: ["Spring Boot Java", "GraphQL", "Kafka", "Microservices"],
     },
     {
         title: "DevOps & Tools",
@@ -37,12 +33,11 @@ const skills: SkillGroup[] = [
             "Dynatrace",
             "Splunk",
             "Graylog",
-            "Micro-frontend architecture",
         ],
     },
     {
         title: "Practices",
-        items: ["Agile (Scrum/Kanban)", "Leadership", "Mentorship", "Requirements Analysis", "Continuous Integration", "Test Automation"],
+        items: ["Agile (Scrum/Kanban)", "Leadership", "Mentorship", "Test Automation"],
     },
 ];
 
@@ -59,8 +54,8 @@ export function Skills() {
                     <div key={group.title} className="grid gap-2">
                         {index > 0 && <Separator className="portfolio-divider" />}
                         <article className="grid py-2 px-1 sm:grid-cols-[170px_1fr] sm:items-start">
-                            <h3 className="text-sm font-semibold uppercase tracking-wide text-muted-foreground">{group.title}</h3>
-                            <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">{group.items.join(", ")}</p>
+                            <h3 className="text-sm font-semibold uppercase tracking-wide">{group.title}</h3>
+                            <p className="text-sm leading-relaxed sm:text-base">{group.items.join(", ")}</p>
                         </article>
                     </div>
                 ))}

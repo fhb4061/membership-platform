@@ -8,7 +8,7 @@ export function About() {
                     <UserRound className="portfolio-icon size-5" />
                     <h2 className="text-2xl font-semibold">About</h2>
                 </div>
-                <p className="max-w-4xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                <p className="max-w-4xl text-base leading-relaxed sm:text-lg">
                     Over the past 7+ years, I have delivered scalable, user-centric software across banking and public-sector domains. I specialize in React and Spring Boot with a strong focus on clean architecture, simplicity, performance, and both user and developer experience.
                 </p>
             </div>

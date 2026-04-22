@@ -105,9 +105,9 @@
 
   body {
     @apply bg-background text-foreground;
-    background-image:
+    /* background-image:
       radial-gradient(circle at top left, rgb(74 222 128 / 0.14), transparent 24%),
-      linear-gradient(180deg, #07110b 0%, #030605 100%);
+      linear-gradient(180deg, #07110b 0%, #030605 100%); */
   }
 }
 
@@ -122,6 +122,6 @@
   }
 
   .portfolio-accent-bar {
-    @apply bg-primary/75;
+    @apply bg-primary/50;
   }
 }

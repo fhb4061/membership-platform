@@ -20,12 +20,12 @@ const contact: PortfolioContact = {
 
 export function Contact() {
     return (
-        <section id="contact" className="scroll-mt-20 space-y-4 border-t border-border/70 pt-5">
+        <section id="contact" className="scroll-mt-20 space-y-4">
             <h2 className="text-xl font-semibold">Contact</h2>
-            <ul className="space-y-2.5 text-sm text-muted-foreground">
+            <ul className="space-y-2.5 text-sm">
                 <li className="flex items-start gap-3">
                     <Mail className="portfolio-icon mt-0.5 size-4" />
-                    <a className="underline underline-offset-4 hover:text-foreground" href={`mailto:${contact.email}`}>
+                    <a className="underline underline-offset-4 hover:text-muted-foreground" href={`mailto:${contact.email}`}>
                         {contact.email}
                     </a>
                 </li>
@@ -36,7 +36,7 @@ export function Contact() {
                 <li className="flex items-start gap-3">
                     <UserRound className="portfolio-icon mt-0.5 size-4" />
                     <a
-                        className="underline underline-offset-4 hover:text-foreground"
+                        className="underline underline-offset-4 hover:text-muted-foreground"
                         href={contact.linkedinUrl}
                         rel="noopener noreferrer"
                         target="_blank"

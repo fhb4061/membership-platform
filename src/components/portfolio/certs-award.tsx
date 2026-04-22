@@ -36,7 +36,7 @@ export function CertsAward() {
                     <CardContent className="px-5">
                         <p className="font-medium">{education.institution}</p>
                         <p className="text-sm text-muted-foreground">{education.period}</p>
-                        <p className="mt-2 text-muted-foreground">{education.degree}</p>
+                        <p className="mt-2">{education.degree}</p>
                         <p className="text-sm text-muted-foreground">Major: {education.major}</p>
                     </CardContent>
                 </Card>
@@ -45,7 +45,7 @@ export function CertsAward() {
                         <CardTitle className="text-lg">Certifications</CardTitle>
                     </CardHeader>
                     <CardContent className="px-5">
-                        <ul className="space-y-1 text-muted-foreground">
+                        <ul className="space-y-1">
                             {certifications.map((certification) => (
                                 <li key={certification.name}>{certification.name}</li>
                             ))}
