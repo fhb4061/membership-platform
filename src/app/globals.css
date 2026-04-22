@@ -113,10 +113,6 @@
 
 @layer components {
 
-  .portfolio-soft-panel {
-    @apply overflow-hidden rounded-[1.5rem] border border-border/70 bg-card/45;
-  }
-
   .portfolio-divider {
     @apply bg-border/80;
   }

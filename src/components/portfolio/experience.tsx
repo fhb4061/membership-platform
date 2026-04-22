@@ -47,13 +47,13 @@ export function Experience() {
             </div>
             <div className="space-y-6">
                 {experiences.map((experience) => (
-                    <Card key={`${experience.company}-${experience.period}`} className="gap-0 rounded-[1.5rem] py-0">
-                        <CardHeader className="gap-1 px-5 py-5">
-                            <p className="text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
-                            <CardTitle className="text-xl">{experience.role}</CardTitle>
+                    <Card key={`${experience.company}-${experience.period}`}>
+                        <CardHeader className="gap-1 pb-5">
                             <p className="text-base font-normal text-muted-foreground">{experience.company}</p>
+                            <CardTitle className="text-xl">{experience.role}</CardTitle>
+                            <p className="text-sm uppercase tracking-wide text-muted-foreground">{experience.period}</p>
                         </CardHeader>
-                        <CardContent className="px-5 pb-5">
+                        <CardContent className="">
                             <ul className="space-y-3">
                                 {experience.bullets.map((bullet) => (
                                     <li key={bullet} className="relative pl-4">
