@@ -1,5 +1,6 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Heading } from "@/components/ui/Heading";
 
 type ExperienceItem = {
     role: string;
@@ -43,7 +44,10 @@ export function Experience() {
         <section id="experience" className="space-y-6 scroll-mt-20">
             <div className="flex items-center gap-3">
                 <BriefcaseBusiness className="portfolio-icon size-5" />
-                <h2 className="text-2xl font-semibold">Experience</h2>
+                <Heading
+                    label="Experience"
+                    size={2}
+                />
             </div>
             <div className="space-y-6">
                 {experiences.map((experience) => (

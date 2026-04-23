@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone, UserRound } from "lucide-react";
+import { Heading } from "@/components/ui/Heading";
 
 type PortfolioContact = {
     email: string;
@@ -21,7 +22,10 @@ const contact: PortfolioContact = {
 export function Contact() {
     return (
         <section id="contact" className="scroll-mt-20 space-y-4">
-            <h2 className="text-xl font-semibold">Contact</h2>
+            <Heading
+                label="Contact"
+                size={2}
+            />
             <ul className="space-y-2.5 text-sm">
                 <li className="flex items-start gap-3">
                     <Mail className="portfolio-icon mt-0.5 size-4" />

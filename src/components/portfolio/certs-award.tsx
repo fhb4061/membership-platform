@@ -1,5 +1,6 @@
 import { Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Heading } from "@/components/ui/Heading";
 
 type Certification = {
     name: string;
@@ -26,7 +27,10 @@ export function CertsAward() {
         <section id="certs-awards" className="space-y-5 scroll-mt-20">
             <div className="flex items-center gap-3">
                 <Award className="portfolio-icon size-5" />
-                <h2 className="text-2xl font-semibold">Certs & Awards</h2>
+                <Heading
+                    label="Certs & Awards"
+                    size={2}
+                />
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
                 <Card className="gap-3 rounded-[1.5rem] py-5">

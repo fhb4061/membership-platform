@@ -1,6 +1,7 @@
 import { Wrench } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Panel } from "@/components/ui/panel";
+import { Heading } from "@/components/ui/Heading";
 
 type SkillGroup = {
     title: string;
@@ -47,7 +48,10 @@ export function Skills() {
         <section id="skills" className="space-y-6 scroll-mt-20">
             <div className="flex items-center gap-3">
                 <Wrench className="portfolio-icon size-5" />
-                <h2 className="text-2xl font-semibold">Skills</h2>
+                <Heading
+                    label="Skills"
+                    size={2}
+                />
             </div>
             <Panel>
                 {skills.map((group, index) => (
