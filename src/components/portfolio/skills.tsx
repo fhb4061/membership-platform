@@ -1,7 +1,7 @@
 import { Wrench } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { Panel } from "@/components/ui/panel";
-import { Heading } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/heading";
 
 type SkillGroup = {
     title: string;

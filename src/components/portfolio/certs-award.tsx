@@ -1,6 +1,6 @@
 import { Award } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Heading } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/heading";
 
 type Certification = {
     name: string;

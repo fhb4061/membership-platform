@@ -1,5 +1,5 @@
 import { UserRound } from "lucide-react";
-import { Heading } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/heading";
 
 export function About() {
     return (

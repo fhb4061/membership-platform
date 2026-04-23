@@ -1,4 +1,4 @@
-import { Heading } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/heading";
 
 type PortfolioHero = {
     name: string;

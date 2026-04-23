@@ -1,5 +1,5 @@
 import { Mail, MapPin, Phone, UserRound } from "lucide-react";
-import { Heading } from "@/components/ui/Heading";
+import { Heading } from "@/components/ui/heading";
 
 type PortfolioContact = {
     email: string;
