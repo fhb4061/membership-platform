@@ -63,7 +63,7 @@ export function Experience() {
                             <ul className="space-y-3">
                                 {experience.bullets.map((bullet) => (
                                     <li key={bullet} className="relative pl-4">
-                                        <span className="portfolio-accent-bar absolute inset-y-0 left-0 w-1 rounded-full" />
+                                        <span className="bg-primary/50 absolute inset-y-0 left-0 w-1 rounded-full" />
                                         <span className="relative text-sm leading-relaxed sm:text-base">{bullet}</span>
                                     </li>
                                 ))}
