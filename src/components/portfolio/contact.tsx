@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone, UserRound } from "lucide-react";
+import { Mail, MapPin, Phone, Contact as ContactIcon, MessageSquareMore } from "lucide-react";
 import { Heading } from "@/components/ui/heading";
 
 type PortfolioContact = {
@@ -22,23 +22,26 @@ const contact: PortfolioContact = {
 export function Contact() {
     return (
         <section id="contact" className="scroll-mt-20 space-y-4">
-            <Heading
-                label="Contact"
-                size={2}
-            />
+            <div className="flex items-center gap-3">
+                <ContactIcon className="portfolio-icon size-5" />
+                <Heading
+                    label="Contact"
+                    size={2}
+                />
+            </div>
             <ul className="space-y-2.5 text-sm">
                 <li className="flex items-start gap-3">
-                    <Mail className="portfolio-icon mt-0.5 size-4" />
+                    <Mail className="mt-0.5 size-4" />
                     <a className="underline underline-offset-4 hover:text-muted-foreground" href={`mailto:${contact.email}`}>
                         {contact.email}
                     </a>
                 </li>
                 <li className="flex items-start gap-3">
-                    <Phone className="portfolio-icon mt-0.5 size-4" />
+                    <Phone className="mt-0.5 size-4" />
                     <span>{contact.phone}</span>
                 </li>
                 <li className="flex items-start gap-3">
-                    <UserRound className="portfolio-icon mt-0.5 size-4" />
+                    <MessageSquareMore className="mt-0.5 size-4" />
                     <a
                         className="underline underline-offset-4 hover:text-muted-foreground"
                         href={contact.linkedinUrl}
@@ -49,7 +52,7 @@ export function Contact() {
                     </a>
                 </li>
                 <li className="flex items-start gap-3">
-                    <MapPin className="portfolio-icon mt-0.5 size-4" />
+                    <MapPin className="mt-0.5 size-4" />
                     <span>{contact.location}</span>
                 </li>
             </ul>
