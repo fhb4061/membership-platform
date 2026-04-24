@@ -4,8 +4,13 @@ import { Button } from "./button";
 import { BriefcaseBusiness, LucideIcon, Mail, UserRound, Wrench } from "lucide-react";
 
 const meta = {
-    title: "Components/Navigation",
+    title: "Components/UI/NavigationMenu",
     component: NavigationMenu,
+    decorators: (Story) => (
+        <div className="bg-background p-3">
+            <Story />
+        </div>
+    )
 } satisfies Meta<typeof NavigationMenu>;
 
 export default meta;
