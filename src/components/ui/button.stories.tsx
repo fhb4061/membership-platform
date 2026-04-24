@@ -1,12 +1,14 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Button } from "@/components/ui/button";
 import { Briefcase } from "lucide-react";
+import { expect, fn } from "storybook/test";
 
 const meta = {
     title: "Components/UI/Button",
     component: Button,
     args: {
         children: "Button",
+        onClick: fn()
     },
     argTypes: {
         size: {
@@ -23,7 +25,24 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Basic: Story = {
+    play: async ({ canvas, userEvent, args }) => {
+        const button = await canvas.findByRole("button", { name: "Button" });
 
+        // assert onClick event
+        await userEvent.click(button);
+        expect(args.onClick).toHaveBeenCalled();
+    }
+}
+
+export const Disabled: Story = {
+    args: {
+        disabled: true
+    },
+    play: async ({ canvas }) => {
+        const button = await canvas.findByRole("button", { name: "Button" });
+
+        expect(button).toBeDisabled();
+    }
 }
 
 export const SizePreview: Story = {
@@ -48,29 +67,5 @@ export const SizePreview: Story = {
                 </Button>
             </div>
         </div>
-    )
-}
-
-export const BasicSize: Story = {
-    argTypes: {
-        size: {
-            options: ["default", "sm"]
-        }
-    }
-}
-
-export const IconSize: Story = {
-    argTypes: {
-        size: {
-            options: ["icon-xs", "icon-sm", "icon-lg"]
-        }
-    },
-    render: (args) => (
-        <Button
-            size="icon-lg"
-            {...args}
-        >
-            <Briefcase />
-        </Button>
     )
 }
