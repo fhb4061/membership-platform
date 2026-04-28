@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { signOut } from "@/lib/auth/actions";
 import { auth } from "@/lib/auth/server"
 import Link from "next/link";
+import Book from "./book";
 
 // Server components using auth methods must be rendered dynamically
 export const dynamic = 'force-dynamic';
@@ -29,8 +31,6 @@ export default async function BookPage() {
     }
 
     return (
-        <>
-            I am book
-        </>
+        <Book />
     )
 }

@@ -1,11 +1,11 @@
 'use client';
 
 import { useActionState } from "react";
-import { signInWithEmail } from "./signin-actions";
 import { Button } from "@/components/ui/button";
 import { FieldGroup, FieldSet, FieldLegend, Field, FieldLabel, FieldError } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { signInWithEmail } from "@/lib/auth/actions";
 
 export default function SignInPage() {
     const [state, formAction, isPending] = useActionState(signInWithEmail, undefined);

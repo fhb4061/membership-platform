@@ -1,10 +1,10 @@
 'use client';
 
 import { useActionState } from "react";
-import { handleVerifyEmail } from "./verify-actions";
 import { Field, FieldError, FieldGroup, FieldLabel, FieldLegend, FieldSet } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@/components/ui/input-otp";
+import { handleVerifyEmail } from "@/lib/auth/actions";
 
 export default function VerifyEmailPage() {
     const [state, formAction, isPending] = useActionState(handleVerifyEmail, undefined);

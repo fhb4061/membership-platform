@@ -1,11 +1,11 @@
 'use client';
 
 import { useActionState } from "react";
-import { signUpWithEmail } from "./signup-actions";
 import { Field, FieldError, FieldGroup, FieldLabel, FieldLegend, FieldSet } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { signUpWithEmail } from "@/lib/auth/actions";
 
 export default function SignUpPage() {
     const [state, formAction, isPending] = useActionState(signUpWithEmail, undefined);
